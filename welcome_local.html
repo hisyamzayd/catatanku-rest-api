@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p#title {
+            text-align: center;
+            margin-top: 2em;
+        }
+        p#main {
+            text-align: center;
+            margin-top: 1em;
+        }
+    </style>
+    <title>Catatanku REST API</title>
+</head>
+<body>
+    <p id="title">
+        Hello 😁😘, welcome to Catatanku REST API app.<br/><br/>
+        Here's url command for <b>CREATE, READ, UPDATE, and DELETE</b> catatan data : <br/><br/>
+    </p>
+    <p id="main"> 
+        - <b>CREATE</b> new catatan (POST<b>*</b> - form.urlencoded) :
+        <a href="#">localhost:3000/catatan</a>
+    </p>
+    <p id="main"> 
+        - <b>READ</b> all catatan (GET - query) : 
+        <a href="/catatan/all" target="blank">
+            localhost:3000/catatan/all
+        </a>
+    </p>
+    <p id="main"> 
+        - <b>READ</b> single catatan by id (GET - query): 
+        <a href="/catatan?id=1" target="blank">
+            localhost:3000/catatan?id=1
+        </a>
+    </p>
+    <p id="main"> 
+        - <b>UPDATE</b> existing catatan by id (PUT<b>*</b> - query and form.urlencoded) : 
+        <a href="#">localhost:3000/catatan?id=1</a>
+    </p>
+    <p id="main"> 
+        - <b>DELETE</b> existing catatan by id (DELETE<b>*</b> - query) : 
+        <a href="#">localhost:3000/catatan?id=1</a>
+    </p>
+    <p id="main">
+        <br/><b>*</b> use API client for testing tools like
+        <a href="https://www.postman.com/" target="blank">POSTMAN</a>
+    </p>
+</body>
+</html>

@@ -83,7 +83,7 @@ $ psql -V #if this command not emerge, set psql on OS environment first
     ```
 
 ### Connecting to Database
-Open [catatan_routes.js](catatan_routes.js) and uncomment and comment these code. User based on your own configuration.
+Open [catatan_routes.js](catatan_routes.js) and uncomment and comment these code. User information based on your own configuration.
 ```js
 //uncomment this for local use
 user: 'your_name',
