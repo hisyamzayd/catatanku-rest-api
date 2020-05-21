@@ -8,10 +8,10 @@ Things you need to install
 * [PostgreSQL](https://www.postgresql.org/download/) - free and open-source relational DBMS (without any extension)
 
 Check if already installed
-```bash
-node -v
-npm -v
-psql -V
+```sh
+$ node -v
+$ npm -v
+$ psql -V
 ```
 
 

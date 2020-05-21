@@ -12,10 +12,15 @@ app.use(
     })
 )
 
+//set title
+app.set('title', 'Catatanku REST API')
+
 //all routes
 //index route
 app.get('/', (req, res) => {
-    res.status(200).send(`app success running on port: ${port}`)
+    res.status(200).send(`
+        Hello, welcome     
+    `)
 })
 
 //get all catatan
