@@ -1,5 +1,6 @@
 const express = require('express')
 const body_parser = require('body-parser')
+const path = require('path')
 
 const app = express()
 const port = process.env.PORT || 3000 //for heroku purpose system
@@ -12,15 +13,15 @@ app.use(
     })
 )
 
-//set title
-app.set('title', 'Catatanku REST API')
-
 //all routes
 //index route
 app.get('/', (req, res) => {
-    res.status(200).send(`
-        Hello, welcome     
-    `)
+    if (port == 3000) {
+        res.status(200).sendFile(path.join(__dirname + '/welcome_local.html'))
+    }
+    else {
+        res.status(200).sendFile(path.join(__dirname + '/welcome_heroku.html'))
+    }
 })
 
 //get all catatan
