@@ -4,7 +4,7 @@
   "description": "aplikasi catatan 'catatanku' berbasis android dengan architecture component dan rest api",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "hisyamzayd",
   "license": "ISC",

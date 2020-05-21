@@ -2,7 +2,7 @@ const express = require('express')
 const body_parser = require('body-parser')
 
 const app = express()
-const port = 3000 || process.env.PORT //for heroku purpose system
+const port = process.env.PORT || 3000 //for heroku purpose system
 const db = require('./catatan_routes')
 
 app.use(body_parser.json())
