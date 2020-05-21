@@ -11,20 +11,25 @@ const pool = new Pool({
 //queries
 //get all catatan
 const get_catatan = (req, res) => {
-    pool.query(
-        'SELECT * FROM catatan ORDER BY id DESC', 
-        (err, results) => {
-            if (err) {
-                throw err
+    if (req.method !== "GET") {
+        res.status(405).send('method not allowed')
+    }
+    else {
+        pool.query(
+            'SELECT * FROM catatan ORDER BY waktu DESC', 
+            (err, results) => {
+                if (err) {
+                    throw err
+                }
+                res.status(200).json(results.rows)
             }
-            res.status(200).json(results.rows)
-        }
-    )
+        )
+    }
 }
 
 //get only one catatan by id
 const get_catatan_by_id = (req, res) => {
-    const id = parseInt(req.params.id)
+    const id = parseInt(req.query.id)
 
     pool.query(
         'SELECT * FROM catatan WHERE id = $1 limit 1', 
@@ -49,14 +54,14 @@ const set_catatan = (req, res) => {
             if (err) {
                 throw err
             }
-            res.status(201).send(`catatan added with ID: ${result.oid}`)
+            res.status(201).send(`${result.rowCount} new catatan added into database`)
         }
     )
 }
 
 //update existing catatan
 const update_catatan = (req, res) => {
-    const id = parseInt(req.params.id)
+    const id = parseInt(req.query.id)
     const { judul, isi } = req.body
 
     pool.query(
@@ -73,7 +78,7 @@ const update_catatan = (req, res) => {
 
 //delete existing catatan
 const delete_catatan = (req, res) => {
-    const id = parseInt(req.params.id)
+    const id = parseInt(req.query.id)
 
     pool.query(
         'DELETE FROM catatan WHERE ID = $1',
