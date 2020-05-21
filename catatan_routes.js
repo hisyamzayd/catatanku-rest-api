@@ -1,11 +1,16 @@
 const Pool = require('pg').Pool
 
 const pool = new Pool({
-    user: 'me',
-    host: 'localhost',
-    database: 'catatanku',
-    password: 'password',
-    port: 5432
+    // use this for local use without heroku. to run local instead : heroku local web
+    // user: 'me',
+    // host: 'localhost',
+    // database: 'catatanku',
+    // password: 'password',
+    // port: 5432
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
 })
 
 //queries
