@@ -7,11 +7,6 @@ const port = process.env.PORT || 3000 //for heroku purpose system
 const db = require('./catatan_routes')
 
 app.use(body_parser.json())
-app.use(
-    body_parser.urlencoded({
-        extended: false
-    })
-)
 
 //all routes
 //index route
@@ -31,10 +26,10 @@ app.use('/catatan/all', db.get_catatan)
 app.get('/catatan', db.get_catatan_by_id)
 
 //insert new catatan
-app.post('/catatan', db.set_catatan)
+app.post('/catatan', db.set_catatans)
 
 //update existing catatan
-app.put('/catatan', db.update_catatan)
+app.put('/catatan', db.update_catatans)
 
 //delete existing catatan
 app.delete('/catatan', db.delete_catatan)
