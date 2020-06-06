@@ -120,3 +120,17 @@ Feel free to contributing with pull requests.
 * Deploy this project into [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true).
 * Using middleware in [Express](https://expressjs.com/en/guide/using-middleware.html).
 * PostgreSQL tutorial [postgresqltutorial.com](https://www.postgresqltutorial.com/).
+
+## License
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
