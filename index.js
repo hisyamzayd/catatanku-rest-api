@@ -19,6 +19,14 @@ app.get('/', (req, res) => {
     }
 })
 
+//nyelip, nyoba video
+app.get('/video', (req, res) => {
+    let nama_file = req.query.nama
+    let video_dir = __dirname + '/video/' + nama_file
+
+    res.status(200).sendFile(path.join(video_dir))
+})
+
 //get all catatan
 app.use('/catatan/all', db.get_catatan)
 
