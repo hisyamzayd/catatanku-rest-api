@@ -1,5 +1,4 @@
 # Catatanku (Rest API)
-REST API for 'Catatanku' android app [catatanku-android](https://github.com/hisyamzayd/catatanku-android).
 Try now at https://catatanku-zayd.herokuapp.com/ or get along with this setup for local use.
 
 ## Getting Started
